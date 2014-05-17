@@ -1,0 +1,60 @@
+---
+Title: 'Clicker Questions'
+---
+ 
+### Who are we?
+ 
+
+#### How long have you used any statistical software in your teaching?
+ 
+ (A) Many years
+ (B) Just starting
+ (C) Never
+ 
+#### What is the software you are currently most comfortable with for teaching?
+ 
+ (A) Graphing Calculators
+ (B) SPSS or SAS
+ (D) Stata
+ (E) Minitab
+ (F) Excel
+ (F) Fathom or similar GUI stats software
+ (G) Mathematica, MAPLE, or MATLAB
+ (H) R
+ 
+#### Describe how central software is to your teaching?
+ 
+ (A) Entirely optional
+ (B) Used on a few occasions
+ (C) Used weekly
+ (D) Used daily
+ 
+#### Statistical Calculations
+ 
+ Insofar as you use software, which of the following characterize the topics you teach with software?
+ 
+ (A) I don't use software for teaching
+ (A) Making textbook calculations more accessible, e.g. t-test, ANOVA
+ (B) Demonstrating statistical concepts from basic principles, e.g. bootstrapping, permutation tests
+ (C) Teaching statistical tests not feasible without software, e.g. multiple regression
+ (C) Both A and B
+ (C) Both A and C
+ (C) Both B and C
+ (C) all of A, B, and C
+ 
+#### Do your students write reports for your statistics class?
+
+(A) No, just homework problems
+(B) Short essays
+(C) A research report
+
+#### How comfortable are you with R?
+
+Choose the highest reasonable answer for you.  Don't be shy!
+
+(A) No experience.
+(B) Know how to use some functions, e.g. `t.test()`
+(C) Know how to write complex statements, e.g. detailed plots
+(D) Simple programming: functions, conditionals
+(E) Advanced programming
+

@@ -1,0 +1,35 @@
+---
+title: "Adding Templates to Your Package"
+author: "Daniel Kaplan"
+date: "May 17, 2014"
+output: html_document
+---
+
+To add more templates to your course package, follow these steps:
+
+1. Find the **existing** template that is most similar in form to the template you plan to add.
+2. Using your computer's file browser, copy the whole directory of the template in (1) and paste the copy into **this directory**.  
+3. Using your computer's file browser, change the name of the copied directory to something sensible for your new template, e.g. `Mid-term-project`.
+4. Edit the `skeleton.Rmd` file in the copy you just made in (3).
+
+To distribute the template, you should 
+
+* rebuild the package
+* post the new version of the package to your distribution web storage
+* have your students re-install the package, e.g. using `updateCourseR()`
+
+### Tips
+
+The name of your template, e.g. `Assignment-01`, does **not** need to be the same as the title in the templates `skeleton.Rmd` file.
+
+The `Rmd` file will always be `skeleton.Rmd`.  It's the name of the *directory* that determines what the template will be listed as in the new-file-from-template dialog.
+
+When the student saves the template, they can use any legitimate name.  You may want to instruct students to save the templates with a name that describes which assignment it is and what is the student's name.
+
+Compile your template to HTML and make sure it works before you give it to students.
+
+You can set the `output:` in your Rmd file for HTML, PDF, or Word, depending on how you want students to hand in or distribute their work.
+
+You may want to have your students hand in the `Rmd` file itself.  You can compile the handed-in files yourself.  This is a good practice if you want to return the `Rmd` file with comments or corrections. 
+
+If you have students compile the `Rmd` file to Word, remember to explain to your students that editing the Word file will **not** cause the underlying `Rmd` file to change accordingly.  Editing should be done to `Rmd`.  It's only sensible to edit the Word output for the purposes of changing the formatting within Word, e.g. for making nice presentations.

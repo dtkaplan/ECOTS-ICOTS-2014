@@ -1,0 +1,93 @@
+---
+title: "Templates in CourseR"
+author: "Effective Teaching using R, RStudio, and the mosaic package"
+date: "ECOTS 2014 Workshop"
+output: html_document
+---
+
+Welcome to the `CourseR` package.  This Rmd file is an example of a template.  You can copy and edit it to create template for your own students.
+
+Templates are a means to provide pre-defined Rmd content via a package.  The CourseR package provides an easily customizable way to provide outlines and R commands.  You do this by writing a template with those materials.  Your students will have access to the Rmd file.
+
+## Short Example
+
+### Assignment 1: Bootstrapping
+
+
+#### Initial Instructions 
+
+SAVE THIS TEMPLATE as `assignment01-[firstname]-[lastname]`, as in `assignment01-barack-obama`.  (The `.Rmd` extension will be added automatically.)  You will hand in the Rmd file.
+
+Once you have saved the file, compile it to HTML so that you can confirm that the file works.  Then go back to modifying the Rmd file, compiling it frequently so that you'll be able to find any mistakes you introduce.
+
+Feel free to delete this *Initial Instructions* section once you've saved the file. 
+
+
+#### YOUR NAME GOES HERE
+
+```{r include=FALSE}
+# Don't alter this chunk!  You need mosasic for the calculations here.
+require(mosaic)
+```
+
+Resampling allows an estimate of sampling variation to be made.  It's based on the idea of creating an artificial population from which new random samples --- called *re-samples* can be easily drawn.  The variation in the results of your calculation across many resamples lets you estimate the width of the sampling distribution.
+
+### Example
+
+The mean of the foot-length across all the kids in the `KidsFeet` data is:
+```{r}
+mean( length, data=KidsFeet )
+```
+
+Here's the result of the same calculation on a resample of `KidsFeet`:
+```{r}
+mean( length, data=resample(KidsFeet) )
+```
+
+You can generate several trials resamples automatically, using the `do()` command:
+```{r}
+res <- do(4)*mean( length, data=resample(KidsFeet))
+res
+```
+
+The output from `do()` is a data frame, with one row for each of the trials.
+
+This set of trials is too small to give anything but a vague idea of the size of sampling variation.
+
+#### TASK 1
+
+Carry out a resample of 1000 trials.  Use `densityplot()` to show the distribution of the results of the trials.
+
+```{r}
+# Your calculations go here
+```
+
+**Describe the distribution of the results from the trials.**
+
+What's the shape? Where's the center?  What's the width? 
+
+**Calculate the standard deviation of the results from the trials.**
+
+```{r}
+# Show your work here.
+```
+
+#### TASK 2
+
+Do the same for the median.
+
+Show the resampling distribution.
+
+Describe the similarities and grow differences between the distribution for the median and the distribution for the mean?
+
+#### TASK 3
+
+Calculate the *standard error* of the distributions in Task 1 and 2
+
+```{r}
+# Show your work here
+```
+
+#### Your Questions
+
+Frame two questions that relate to this assignment.  

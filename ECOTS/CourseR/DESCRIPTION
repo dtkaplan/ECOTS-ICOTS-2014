@@ -1,0 +1,9 @@
+Package: CourseR
+Type: Package
+Title: Helps distribute course materials
+Version: 0.1
+Date: 2014-05-17
+Author: Daniel Kaplan <kaplan@macalester.edu>
+Maintainer: Daniel Kaplan <kaplan@macalester.edu>
+Description: More about what it does (maybe more than one line)
+License: GPL

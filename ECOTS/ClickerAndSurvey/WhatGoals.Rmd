@@ -1,0 +1,4 @@
+#### You're taking this R workshop
+
+Say briefly in words what you want to be able to do with R.
+

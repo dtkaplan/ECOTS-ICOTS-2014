@@ -1,0 +1,106 @@
+---
+title: "Distributing Files"
+author: "Daniel Kaplan"
+date: "May 16, 2014"
+output: html_document
+---
+
+* Don't think about your students downloading files.  Instead, think about web services that can provide your students with data.
+
+### Generic R
+
+`read.csv()` and the like can take a URL as an argument, so if you have a web server accessible via URL (for instance, the public directory in Dropbox) you can distribute files to students.
+
+Example, from my Dropbox server ...
+
+```{r}
+# Give example of reading from a URL here.
+```
+
+### R Packages
+
+If you put your data in an R package, students can access any set easily by using the package.
+
+It's not hard to make a package.  You can use a generic structure, which is available here in a zip form.
+
+You, the instructor, should download this zip file and expand it in some accessible web server: Github, Dropbox, your institutional web directory (which is `www.macalester.edu/~kaplan` for me.  You don't need to change anything, including the name of the directory where the package files are. 
+
+```{r eval=FALSE}
+install.packages('devtools')
+require(devtools)
+# then use one of the following, depending on where your server is.
+# Remember to CUSTOMIZE the user name to match your package's location
+install_github("dtkaplan/CourseR")
+install_url("dropbox link")
+install_url("www.macalester.edu/~kaplan/CourseR")
+```
+
+### Customizing your Package
+
+#### Data
+
+Now, put your own data files in the `data` directory of the package.  A nice way to do this is for you, the instructor, to read in the data you want using whatever tools you like.  Then save the data as an `.Rda` file in the package's data directory.  It's nice if you write documentation of your data, which students can access with the `help()` command. 
+
+#### Using a Web Site
+
+In the `R` directory, there is a file, `courseData.R`.  In the first two lines of that file are two URLs.  One is the path to the directory in which you store data that you may want to add to on a day-to-day basis.  The other is the location of your package.  Change these to correspond to your files and save.  Then reinstall the package.  (It's just you, the instructor, who needs to do this.  It sets things up for the students.)
+
+
+
+The `courseData.R` file provides two functions, `courseData()` and `updateCourseR()`.  After your students install and load the package, they will be able to access your data easily with just the name of the data file.  (R mavens: the `dataPath` variable can be a list of paths, if you want to be able to access data from several different sites.)  GIVE AN EXAMPLE WITH MOSAIC.
+
+The `updateCourseR()` function is a little trick.  Suppose that in the middle of the semester --- or every day! --- you update the files in your package, adding new data, for instance.  Once your students have installed and loaded `CourseR` for the first time, they can access your updated package simply by:
+```{r eval=FALSE}
+updateCourseR()
+```
+That should be easy for them to remember.
+
+**R Mavens** If you don't like the name `courseData()`, you can change it to whatever you like, for instance, `ProfSmithData()`.
+
+If there are other CRAN packages you want your students to install, you can list them under the dependencies in the `DESCRIPTION` file.  Then those packages will be installed at the same time as `CourseR` and will be loaded automatically when your students
+```{r}
+require( CourseR )
+```
+Of course, as a matter of personal style, you may prefer to have students load the necessary packages "by hand", e.g.
+```{r eval=FALSE}
+require(mosaic)
+require(ggplot2)
+require(dplyr)
+# ... and so on
+```
+
+
+
+
+### Easier for Students
+
+Each time your students start up R, they should give this command:
+
+```{r eval=FALSE}
+require( CourseR )
+```
+
+Then they will be able to use commands like:
+```{r eval=FALSE}
+todaysData <- courseData('myGreatFile.rda')
+updateCourseR()
+```
+
+Advantages of putting your data in the package `data` directory:
+
+* Simple names can be used.
+* `help()` documentation can be made available.
+* Once installed, no access to the Internet is required to use the data. (But if you're using RStudio Server, this is a moot point.  If a student is using the Desktop version, they can use your data when on the bus back from the varsity volleyball game in a neighboring state.)
+
+Advantages of putting your data on your web server:
+
+* It's very easy for the instructor.  Just copy the data file into the directory you specified in `CourseR`.
+* You can easily share data with other instructors.  They just need to include your web URL in the `..dataPath` variable.
+
+You can do both, so you can get the advantages of both.
+
+
+## For later ...
+
+Templates.
+

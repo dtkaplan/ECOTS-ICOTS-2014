@@ -1,0 +1,15 @@
+---
+title: "Announcement"
+output: html_document
+---
+
+"Effective Teaching using R, RStudio, and the mosaic package"
+Nicholas J Horton, Randall J Pruim, Daniel T Kaplan
+
+This two-hour workshop introduces several techniques that are effective in making the benefits of R accessible to students learning statistics even at the introductory level.  We will focus on techniques that help instructors: how to write classroom notes and exercises, how to organize projects, how to distribute resources to students.  We'll also show how to take advantage of the 'mosaic' package to introduce important R functionality quickly and easily. Mosaic uses a coherent notation that removes key barriers. This lets the instructor focus on statistical concepts even while students are doing data analysis.
+
+Communication is central to teaching, so we’ll introduce the R/Markdown format, which allows narrative content (of any sort, including graphics, math notation, audio and video) to be augmented with R calculations. The format is easily distributed to students in web form, and students can use RMarkdown for assignments and projects. This communication support facilitates the use of a computer strategy that is ridiculously simple yet powerful: start with example computations that already work and make small, steady modifications that move toward the computation you want to perform.  These ideas will be illustrated with classroom-ready modules that can be used directly or as a template for new modules that you want to create or share with other instructors. 
+
+The workshop is directed at those considering teaching with R, or who want to streamline or extend their use of R in the classroom.  Some previous contact with R will be helpful for participating actively in the workshop. All of the software used is free and open-source.  You will be provided with an account on our RStudio server and with working, interactive documents that can be customized while the workshop is in session.  (If you would rather, you may also use a desktop version of RStudio.)
+
+[Planning for CVC](https://docs.google.com/document/d/1Jd7Y540_-2IxX9oTWlQxoHqOlxqjfNlKmwqVIiEcTRE/edit#heading=h.qngfbja2iyd0)
